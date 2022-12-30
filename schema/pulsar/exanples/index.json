@@ -1,0 +1,14 @@
+[
+    {
+      "identifier": "path",
+      "type": "schema",
+      "name": "name",
+      "tags": [
+        {
+          "type": "t1",
+          "value": "false"
+        }
+      ]
+    }
+]
+  

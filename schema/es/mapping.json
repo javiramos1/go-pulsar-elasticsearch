@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "index.number_of_shards": %d,
+    "index.number_of_replicas": %d,
+    "index.refresh_interval": "%s"
+  },
+  "mappings": {
+    "_source": {
+      "enabled": true
+    },
+    "dynamic": "strict",
+    "properties": {
+      "type": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "identifier": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "ingestion_time": {
+        "type": "date"
+      },
+      "persist_time": {
+        "type": "date"
+      },
+      "uuid": {
+        "type": "keyword"
+      },
+      "tags": {
+        "type": "nested",
+        "properties": {
+          "type": {
+            "type": "text"
+          },
+          "value": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "IngestionData",
+  "type": "record",
+  "namespace": "com.ramos",
+  "fields": [
+    {
+      "name": "identifier",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "ingestion_time",
+      "type": "long"
+	  },
+    {
+      "name": "tags",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "Tags",
+            "type": "record",
+            "namespace": "com.ramos",
+            "fields": [
+              {
+                "name": "type",
+                "type": "string"
+              },
+              {
+                "name": "value",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ],
+      "default": null
+    }
+  ]
+}

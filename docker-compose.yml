@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  pulsar:
+    command: bin/pulsar standalone
+    image: apachepulsar/pulsar:2.9.3
+    ports:
+      - 46650:6650
+      - 48080:8080
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.3
+    ports:
+      - 9200:9200
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+      - xpack.security.enabled=true
+      - ELASTIC_PASSWORD=password
