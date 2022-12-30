@@ -12,6 +12,8 @@ This Pulsar Consumer listens for messages which are then batched indexed in Elas
 
 See Env Vars for more information.
 
+A companion project which pushes messages to Pulsar is located [**here**](https://github.com/javiramos1/go-pulsar-elasticsearch).
+
 Metrics are exposed on port **8002** path `/metrics`.
 
 ## Goals
